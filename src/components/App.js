@@ -20,6 +20,7 @@ const App = () => {
       .then((d) => {
         const [name, temp, des, icon] = getFormatedData(d);
         setData({ name, temp, des, icon });
+        setValue("");
       })
       .catch((e) => e);
     return () => controller.abort();
